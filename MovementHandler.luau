@@ -1,7 +1,6 @@
 --Roblox: Jayplayz943
 --Discord: Jaythepro9
 --HiddenDevs Application
---play with shiftlock its easier
 
 -----------------------------
 -- SERVICES --
@@ -112,9 +111,6 @@ local ignorers = {}
 local previousImpulseTick = tick()
 
 local continiousParticles = {}
---
-
-_G.ImpulseCooldown = 0.25 --s prevent piling up impulses to get massive speed
 -----------------------------
 -- PRIVATE FUNCTIONS --
 -----------------------------
@@ -304,13 +300,6 @@ local function getWallNormal()
 	end
 
 	return nil
-end
-
-local function checkImpulse() -- this is quite and old piece of code so I don't really remember to much
-	--but im pretty sure I scrapped the whole impulse thing, and plus global variable :o
-	if tick() - previousImpulseTick < _G.ImpulseCooldown then return false end
-	previousImpulseTick = tick()
-	return true
 end
 
 local function setupColliderIgnores() -- sets up the wall collide ignorers
